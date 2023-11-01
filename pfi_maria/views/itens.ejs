@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/itens.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>BeHealthy</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/img/logo.png">
+        <ul>
+            <li>
+                <a href="/exercicios/inferiores">Inferiores</a>
+            </li>
+            <li>
+                <a href="/exercicios/superiores">Superiores</a>
+            </li>
+            <li>
+                <a href="/exercicios/abdomen">Abdômen</a>
+            </li>
+            <li>
+                <a href="/exercicios/mais">
+                    Mais sobre Exercícios
+                </a>
+            </li>
+        </ul>
+        <img class="user" src="/img/user.png" id="btn">
+    </header>
+
+    <div class="user-menu" id="user-menu">
+        <% if (adm) { %>
+            <a href="/exercicios/adicionar">ADICIONAR</a>
+        <% }%>
+        <a href="/users/favoritos">FAVORITOS</a>
+        <a href="/users/sair">SAIR</a>
+    </div>
+
+    <main class="resultados">
+        <% exercicios.forEach(function(exercicio) { %>
+            <div class="card">
+                <img src="<%= exercicio.image %>" class="card-img">
+                <div class="card-info">
+                    <a href="/exercicios/info/<%= exercicio.id %>">
+                        <h2 class="card-title"><%= exercicio.name %></h2>
+                    </a>
+                    <p class="card-text"><%= exercicio.description %></p>
+                </div>
+                <a href="/exercicios/favoritar/<%= exercicio.id %>">
+                    <% if (exercicio.favorito) { %>
+                        <i class='bx bxs-heart'></i>
+                    <% } else { %>
+                        <i class='bx bx-heart'></i>
+                    <% } %>
+                </a>
+            </div>
+        <% }); %>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

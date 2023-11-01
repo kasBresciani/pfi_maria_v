@@ -1,0 +1,76 @@
+body {
+    overflow: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+main h1 {
+    font-size: 28pt;
+}
+
+main div {
+    width: 30%;
+    font-size: 14pt;
+    text-align: justify;
+}
+
+a {
+    width: 10%;
+    height: 5%;
+    background:#D2E4DE;
+    border-radius: 1em;
+    text-decoration: none;
+    color: #000;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover {
+    background: #9ba5a2;
+}
+
+.top {
+    width: 30%;
+    position: absolute;
+    top: -3em;
+    left: -3em;
+    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+    -moz-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    -o-transform: rotate(-12deg);
+}
+
+.down {
+    width: 30%;
+    position: absolute;
+    top: 70%;
+    left: 71%;
+    transform: rotate(170deg);
+    -webkit-transform: rotate(170deg);
+    -moz-transform: rotate(170deg);
+    -ms-transform: rotate(170deg);
+    -o-transform: rotate(170deg);
+}
+
+.logo {
+    width: 7%;
+    position: absolute;
+    top: 5%;
+    right: 5em;
+    transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+}
