@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/adm.css"> <!-- reciclando CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+
+    <title>BeHealthy</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img class="logo" src="/img/logo.png">
+        </a>
+        <img class="user" src="/img/user.png">
+    </header>
+    <main>
+        <form action="/users/new" method="post">
+            <h1>Criar conta</h1>
+            <input class="inserir" type="text" placeholder="Nome" name="name" required>
+            <input class="inserir" type="email" placeholder="Email" name="email" required>
+            <input class="inserir" type="password" placeholder="Senha" name="password" required>
+            <input class="inserir" type="password" placeholder="Confirmar senha" name="confirmPassword" required>
+            <input class="inserir" type="submit" value="Cadastrar">
+            <a href="/users/entrar">Já possuo uma conta</a>
+        </form>
+    </main>
+</body>
+</html>
